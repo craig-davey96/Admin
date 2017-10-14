@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
+*{ font-family: 'Roboto Condensed', sans-serif; }
+body{ padding: 65.59px 0 0; background: #f2f2f2; }
+
+
+.card{
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border: 0px;
+    margin-bottom: 30px;
+}
+.btn , .form-control , .badge , .input-group-addon{
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;    
+}
+.right-options{
+    float: right;
+    color: #000;
+    height: 24px;
+}
+.right-options a{
+    color: #000;
+    display: inline-block;
+}
+
+.dropzoneBlock{
+    width: 100%;
+    min-height: 300px;
+    padding: 1rem;
+    display: block;
+    clear: both;
+    border: 1px solid rgba(0,0,0,.15);
+}
+.dropzoneBlock .dz-preview.dz-file-preview .dz-image , .dropzoneBlock .dz-preview .dz-image{
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    border:  1px solid rgba(0,0,0,.15);
+}
+.table thead th{ border-bottom: 0px !important; }
+.card-body{ min-height: 300px; position: relative; }
+.card-body.autoHeight{ height: auto !important; min-height: 10px !important; }
+.card-body .loader{
+    width: 100%;
+    height: 100%;
+    display: block;
+    clear: both;
+    background: #FFF url('../images/loader.svg') 50% 50% no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+/* FORM */
+
+div.custom-checkbox input{ display: none; }
+div.custom-checkbox input + label{
+    width: 20px;
+    height: 20px;
+    background: none;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    clear: both;
+    border: 2px solid #2d88a5;
+    -webkit-transition: background 200ms ease-in-out;
+    -moz-transition: background 200ms ease-in-out;
+    -ms-transition: background 200ms ease-in-out;
+    -o-transition: background 200ms ease-in-out;
+    transition: background 200ms ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+div.custom-checkbox input + label:after{
+    font-family: 'FontAwesome';
+    width: 100%;
+    height: 100%;
+    display: block;
+    clear: both;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: "\f00c";
+    color: #FFF;
+    opacity: 0;
+    -webkit-transition: opacity 200ms ease-in-out;
+    -moz-transition: opacity 200ms ease-in-out;
+    -ms-transition: opacity 200ms ease-in-out;
+    -o-transition: opacity 200ms ease-in-out;
+    transition: opacity 200ms ease-in-out;
+    line-height: 17px;
+    font-size: 12px;
+    text-align: center;
+}
+div.custom-checkbox input:checked + label{
+    background: #2d88a5;
+}
+div.custom-checkbox input:checked + label:after{ opacity: 1; }
+
+/* MENU */
+aside.menu{
+    width: 250px;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+aside.menu > .menu-top{
+    width: 100%;
+    height: 65.59px;
+    background: #2d88a5;
+    margin: 0px;
+    padding: 0.8rem 2rem;
+    display: block;
+    clear: both;
+}
+aside.menu h5{
+    margin: 0px;
+    color: rgba(255,255,255,0.2);
+    display: block;
+    clear: both;
+    font-weight:normal;
+    font-size: 12px;
+    padding: 0.75rem 15px;
+    line-height: 1em;
+}
+aside.menu .menu-list{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    clear: both;
+}
+aside.menu .menu-list li{
+    margin: 0px;
+    display: block;
+    clear: both;
+}
+aside.menu .menu-list li a{
+    margin: 0px;
+    padding: 0.75rem 1rem;
+    display: block;
+    clear: both;
+    font-size: 14px !important;
+    color: #eee;
+    text-decoration: none !important;
+    -webkit-transition: background 300ms ease-in-out;
+    -moz-transition: background 300ms ease-in-out;
+    -ms-transition: background 300ms ease-in-out;
+    -o-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    border-left: 5px solid transparent;
+}
+aside.menu .menu-list li a:hover{
+    background: rgba(0,0,0,0.15);
+}
+aside.menu .menu-list li a.active{
+    background: rgba(0,0,0,0.25);
+    border-left: 5px solid #2d88a5;
+}
+aside.menu .menu-list li a i{
+    font-size: 14px !important;
+}
+
+aside.menu .menu-list li.dropdown .dropdown-list{
+    width: 100%;
+    height: auto;
+    background: rgba(255,255,255,0.1);
+    margin: 0px;
+    padding: 0px;
+    display: none;
+}
+aside.menu .menu-list li.dropdown .dropdown-list li a{
+    position: relative;
+}
+aside.menu .menu-list li.dropdown .dropdown-list li a.active{ border: 0px; }
+aside.menu .menu-list li.dropdown .dropdown-list li a:before{
+    width: 7px;
+    height: 7px;
+    margin: 0px;
+    display: block;
+    clear: both;
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10em;
+    border: 1px solid #FFF;
+    position: absolute;
+    top: calc(50% - 3.5px);
+    right: 14px;
+    content: "";
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+aside.menu .menu-list li.dropdown .dropdown-list li a:hover:before , aside.menu .menu-list li.dropdown .dropdown-list li a.active:before{ background: #2d88a5;  border-color: #2d88a5; }
+
+aside.menu .menu-list li.dropdown > a{ position: relative; }
+aside.menu .menu-list li.dropdown > a:after{
+    width: 7px;
+    height: 7px;
+    display: block;
+    clear: both;
+    content: "";
+    border-width: 1px 1px 0px 0px;
+    border-style: solid;
+    border-color: #FFF;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    position: absolute;
+    top:calc(50% - 3.5px);
+    right: 14px;
+}
+aside.menu .menu-list li.dropdown > a.toggled:after{
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* TOP MENU */
+.navbar-custom{
+    width: calc(100% - 250px);
+    position: fixed;
+    background: #FFF !important;
+    top: 0px;
+    right: 0px;
+    padding: 0.8rem 2rem;
+}
+
+/* RIGHT COL */
+.rightcol{
+    width: calc(100% - 250px);
+    height: calc(100vh - 65.59px);
+    margin: 0px;
+    padding: 2rem;
+    display: block;
+    float: right;
+    overflow-y: auto;
+    position: relative;
+}
+.card-header{
+    padding: 1.25rem !important;
+    background: #FFF !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+/* BREADCRUMBS */
+.breadcrumb-custom{
+    width: calc(100% - 250px);
+    background: #FFF;
+    float: right;
+    margin: 0px;
+}
+
+/* =============================== */
+/*              AUTH               */
+/* =============================== */
+
+div.login-block{
+    width: 800px;
+    height: 450px;
+    background: #FFF;
+    margin: 0px;
+    display: block;
+    clear: both;
+    position: absolute;
+    top: calc(50% - 400px/2);
+    left: calc(50% - 800px/2);
+}
+div.login-block .left , div.login-block .right{
+    width: 50%;
+    height: 100%;
+    padding: 25px;
+    display: block;
+    float: left;
+}
